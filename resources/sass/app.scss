@@ -4,5 +4,18 @@
 // Variables
 @import 'variables';
 
+// Fontawsome
+$fa-font-path: "../webfonts";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+// Admin-LTE
+@import '../../node_modules/admin-lte/dist/css/adminlte.css';
+
+// Custom Styles
+@import '../../resources/sass/custom.scss';

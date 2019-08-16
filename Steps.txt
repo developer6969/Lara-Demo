@@ -1,0 +1,15 @@
+Install fresh Laravel project
+$ laravel new Clinica
+
+Debug App/Provider Schema::defaultStringlength(191)
+Connect Database in .env file
+
+Install following for Admin Panel :
+$ npm install
+$ npm install admin-lte@v3.0.0-alpha.2 --save
+$ npm install --save-dev @fortawesome/fontawesome-free
+
+Edit following files :
+ - js/app.js : require('admin-lte')
+ - sass/app.scss : import
+ - sass/custom.scss : Personlised css styles
