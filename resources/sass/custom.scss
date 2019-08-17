@@ -1,12 +1,34 @@
-// Fontawsome Icon
+.mp-0 {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 18px !important;
+}
+
 .d-icon {
     font-size: 1.2rem;
-    width: 30px;
+    width: 35px;
+    text-align: center;
+}
+
+.h-icon {
+    font-size: 1.5rem;
+    color: $primary;
+    width: 35px;
+    text-align: center;
+}
+
+.m-icon {
+    color: $primary;
+    width: 25px;
     text-align: center;
 }
 
 .d-text {
     padding-left: 2px;
+}
+
+.caps {
+    font-variant: small-caps;
 }
 
 .d-title {

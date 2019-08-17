@@ -5,123 +5,74 @@
         <li class="nav-item">
             <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
         </li>
-        {{-- <li class="nav-item d-none d-sm-inline-block">
-            <a href="#" class="nav-link">Android</a>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-            <a href="#" class="nav-link">iOs</a>
-        </li> --}}
     </ul>
 
     <!-- SEARCH FORM -->
-    {{-- <div class="input-group input-group-sm">
+    <div class="input-group input-group-sm ml-2 mr-2">
         <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
         <div class="input-group-append">
             <button class="btn btn-navbar">
             <i class="fa fa-search"></i>
             </button>
         </div>
-    </div> --}}
+    </div>
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-        <!-- Messages Dropdown Menu -->
         <li class="nav-item dropdown">
+
             <a class="nav-link" data-toggle="dropdown" href="#">
-                <i class="far fa-comments  d-icon"></i>
-                <span class="badge badge-danger navbar-badge">3</span>
+                <i class="fas fa-user-circle h-icon"></i>
             </a>
-            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="width: 250px;">
-                <a href="#" class="dropdown-item">
-                    <!-- Message Start -->
-                    <div class="media">
-                        <img src="img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-                        <div class="media-body">
-                            <h3 class="dropdown-item-title">
-                                Brad Diesel
-                                <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                            </h3>
-                            <p class="text-sm">Call me whenever you can...</p>
-                            <p class="text-sm text-muted"><i class="far fa-clock"></i> 4 Hours Ago</p>
-                        </div>
+
+            <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right mp-0" style="width: 250px; padding-bottom: 4px !important;">
+
+                <div class="row">
+                    <img class="col-6 img-rounded" src="img/avatar04.png" alt="User Image" style="object-fit: fill">
+                    <div class="col-6 mp-0">
+                        <p class="caps pt-2 mb-0"><strong>{{ Auth::user()->name }}</strong></p>
+                        <p class="mp-0"><small>{{ Auth::user()->email }}</small></p>
+                        <a class="btn btn-block btn-outline-success btn-sm mb-2 mt-2"
+                            style="width: 110px; height: 20px; line-height: 10px !important; font-weight: 700"
+                            href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                            document.getElementById('edit-form').submit();">
+                            <small>Edit Profile</small>
+                        </a>
+                        <form id="edit-form" action="{{ route('logout') }}" method="POST" 
+                                style="display: none;">@csrf</form>                                    
+                        <a class="btn btn-block btn-outline-danger btn-sm"
+                            style="width: 110px; height: 20px; line-height: 10px !important; font-weight: 700"
+                            href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                            <small>Logout</small>
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" 
+                                style="display: none;">@csrf</form>                                    
                     </div>
-                    <!-- Message End -->
-                </a>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item" style="width: 250px;">
-                <!-- Message Start -->
-                <div class="media">
-                    <img src="img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-                    <div class="media-body">
-                        <h3 class="dropdown-item-title">
-                            John Pierce
-                            <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-                        </h3>
-                        <p class="text-sm">I got your message bro</p>
-                        <p class="text-sm text-muted"><i class="far fa-clock"></i> 4 Hours Ago</p>
-                    </div>
-                </div>
-                <!-- Message End -->
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item" style="width: 250px;">
-                <!-- Message Start -->
-                <div class="media">
-                    <img src="img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-                    <div class="media-body">
-                        <h3 class="dropdown-item-title">
-                            Nora Silvester
-                            <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></i></span>
-                        </h3>
-                        <p class="text-sm">The subject goes here</p>
-                        <p class="text-sm text-muted"><i class="far fa-clock"></i> 4 Hours Ago</p>
-                    </div>
-                </div>
-                <!-- Message End -->
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item dropdown-footer text-center">See All Messages</a>
-            </div>
-        </li>
-        <!-- Notifications Dropdown Menu -->
-        <li class="nav-item dropdown">
-            <a class="nav-link" data-toggle="dropdown" href="#">
-                <i class="far fa-bell d-icon"></i>
-                <span class="badge badge-warning navbar-badge">15</span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                <span class="dropdown-header">15 Notifications</span>
+                </div>                
+
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item" style="width: 250px;">
-                    <i class="fa fa-envelope mr-2"></i> 4 new messages
+                <a href="#" class="dropdown-item pl-3">
+                    <i class="fa fa-envelope pr-1 m-icon"></i> 4 new messages
                     <span class="float-right text-muted text-sm">3 mins</span>
                 </a>
+
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item" style="width: 250px;">
-                    <i class="fa fa-users mr-2"></i> 8 friend requests
+                <a href="#" class="dropdown-item pl-3">
+                    <i class="fa fa-user pr-1 m-icon"></i> 8 appointments
                     <span class="float-right text-muted text-sm">12 hours</span>
                 </a>
+
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item" style="width: 250px;">
-                    <i class="fa fa-file mr-2"></i> 3 new reports
+                <a href="#" class="dropdown-item pl-3">
+                    <i class="fa fa-file pr-1 m-icon"></i> 3 new reports
                     <span class="float-right text-muted text-sm">2 days</span>
                 </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+                <div class="dropdown-divider mb-1"></div>
             </div>
+
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">
-                <i class="fas fa-power-off d-icon"></i>
-            </a>
-        </li>
-        {{-- 
-        <li class="nav-item ml-2">
-            <a class="nav-link p-1" data-widget="control-sidebar" data-slide="true" href="#">
-                <img src="img/avatar04.png" class="img-circle profile-image" alt="User Image">
-                <span class="username">{{ Auth::user()->name }}</span><span class="caret"></span>
-            </a>
-        </li>
-         --}}
     </ul>
 </nav>

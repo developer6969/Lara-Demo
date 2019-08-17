@@ -1,120 +1,83 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
         <!-- Brand Logo -->
         <a href="#" class="brand-link">
-            <img src="img/medical_logo_640.png" alt="AdminLTE Logo" class="brand-image img-logo" style="opacity: .8;">
+            <img src="img/medical_logo_640.png" alt="AdminLTE Logo" class="brand-image">
             <span class="brand-text font-weight-light">CLINICA <span class="text-sm">[ Ver 2.0 ]</span></span>
         </a>
     
         <!-- Sidebar -->
-        <div class="sidebar">
-            <!-- Sidebar user panel -->
-            {{-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                <div class="image">
-                    <img src="img/avatar04.png" class="img-circle" alt="User Image">
-                </div>
-                <div class="info">
-                    <a href="#" class="d-block">
-                        {{ Auth::user()->name }} <span class="caret"></span>
-                        (<em>{{ Auth::user()->type }}</em>)
-                    </a>
-                </div>
-            </div> --}}
+        <div class="sidebar p-1">
     
             <!-- Sidebar Menu -->
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                
+
                     <li class="nav-item">
                         <router-link to="/dashboard" class="nav-link">
-                            <i class="fas fa-tachometer-alt d-icon orange"></i>
+                            <i class="fas fa-tachometer-alt d-icon"></i>
                             <p class="d-text"> Dashboard </p>
                         </router-link>
                     </li>
-    
-                    <!-- <li class="nav-header">MANAGMENT</li> -->
-    
+        
                     <li class="nav-item has-treeview menu-close">
                         <a href="#" class="nav-link">
-                            <i class="fas fa-users d-icon indigo"></i>
-                            <p class="d-text">Users
-                                <i class="right fa fa-angle-left"></i>
-                            </p>
+                            <i class="far fa-calendar d-icon"></i>
+                            <p class="d-text">Appointments</p>
                         </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <router-link to="/users" class="nav-link">
-                                    <i class="fas fa-genderless d-icon red"></i>
-                                    <p class="d-text">Member</p>
-                                </router-link>
-                            </li>
-                            <li class="nav-item">
-                                 <router-link to="/staff" class="nav-link">
-                                    <i class="fas fa-genderless d-icon red"></i>
-                                    <p class="d-text">Staff</p>
-                                </router-link>
-                            </li>
-                            <li class="nav-item">
-                                <router-link to="/trainers" class="nav-link">
-                                    <i class="fas fa-genderless d-icon red"></i>
-                                    <p class="d-text">Trainer</p>
-                                </router-link>
-                            </li>
-                        </ul>
                     </li>
     
                     <li class="nav-item">
                         <router-link to="/products" class="nav-link">
-                            <i class="fas fa-prescription-bottle d-icon blue"></i>
-                            <p class="d-text"> Products </p>
+                            <i class="fas fa-users d-icon"></i>
+                            <p class="d-text">Patients</p>
                         </router-link>
                     </li>
     
                     <li class="nav-item">
                         <router-link to="/demo" class="nav-link">
-                            <i class="fas fa-capsules d-icon red"></i>
-                            <p class="d-text"> Nutrition </p>
+                            <i class="fas fa-user-md d-icon"></i>
+                            <p class="d-text">Doctors</p>
                         </router-link>
                     </li>
     
                     <li class="nav-item">
                         <router-link to="/demo" class="nav-link">
-                            <i class="fas fa-carrot d-icon green"></i>
+                            <i class="fas fa-carrot d-icon"></i>
                             <p class="d-text"> Diet Charts </p>
                         </router-link>
                     </li>
     
-    
-                    <!-- <li class="nav-header">COMMUNICATION</li> -->
-                    
+                        
                     <li class="nav-item">
                         <router-link to="/demo" class="nav-link">
-                            <i class="fas fa-bullhorn d-icon cyan"></i>
+                            <i class="fas fa-bullhorn d-icon"></i>
                             <p class="d-text"> Announcements </p>
                         </router-link>
                     </li>
     
                     <li class="nav-item">
                         <router-link to="/demo" class="nav-link">
-                            <i class="fas fa-comments d-icon purple"></i>
+                            <i class="fas fa-comments d-icon"></i>
                             <p class="d-text"> Group Chat </p>
                         </router-link>
                     </li> 
     
                      <li class="nav-item has-treeview menu-close">
                         <a href="#" class="nav-link">
-                            <i class="fas fa-users d-icon pink"></i>
+                            <i class="fas fa-users d-icon"></i>
                             <p class="d-text">Members<i class="right fa fa-angle-left"></i></p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <router-link to="/demo" class="nav-link">
-                                    <i class="fas fa-basketball-ball d-icon yellow"></i>
+                                    <i class="fas fa-basketball-ball d-icon"></i>
                                     <p class="d-text">Add Member</p>
                                 </router-link>
                             </li>
                             <li class="nav-item">
                                 <router-link to="/demo" class="nav-link">
-                                    <i class="fas fa-basketball-ball d-icon yellow"></i>
+                                    <i class="fas fa-basketball-ball d-icon"></i>
                                     <p class="d-text">Add Staff</p>
                                 </router-link>
                             </li>
@@ -123,7 +86,7 @@
     
                     <li class="nav-item">
                         <router-link to="/demo" class="nav-link">
-                            <i class="fas fa-blog d-icon teal"></i>
+                            <i class="fas fa-blog d-icon"></i>
                             <p class="d-text">
                                 My Blog
                                 <span class="right badge badge-danger">New</span>
@@ -133,29 +96,16 @@
     
                     <li class="nav-item">
                         <router-link to="/developer" class="nav-link">
-                            <i class="fas fa-code d-icon cyan"></i>
+                            <i class="fas fa-code d-icon"></i>
                             <p class="d-text"> Developer </p>
                         </router-link>
                     </li>
     
                     <li class="nav-item">
                         <router-link to="/profile" class="nav-link">
-                            <i class="fas fa-user d-icon green"></i>
+                            <i class="fas fa-user d-icon"></i>
                             <p class="d-text"> Profile </p>
                         </router-link>
-                    </li>
-    
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-                            <i class="fas fa-power-off d-icon red"></i>
-                            <p>{{ __('Logout') }}</p>
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" 
-                            method="POST" style="display: none;">
-                            @csrf
-                        </form>
                     </li>
                     
                 </ul>
