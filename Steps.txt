@@ -13,3 +13,13 @@ Edit following files :
  - js/app.js : require('admin-lte')
  - sass/app.scss : import
  - sass/custom.scss : Personlised css styles
+
+ Install followings for Vue
+  $ npm install Vue
+  $ npm install vue-router
+  $ npm i axios vform
+
+  Edit to config Vue.js :
+ - js/app.jp
+
+ Create API/UserController

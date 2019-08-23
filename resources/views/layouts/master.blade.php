@@ -28,6 +28,7 @@
             <div class="content-wrapper">
                 <div class="content">
                     <div class="container-fluid">
+                        {{-- Dynamic Contect by Vue Routers --}}
                         <router-view></router-view>
                     </div>
                 </div>

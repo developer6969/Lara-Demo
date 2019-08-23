@@ -17,4 +17,25 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+
+// Launch on click of dashboard
+// All other routes in from here onwards will be Vue-Routes
+// and are registered in resources/js/app.js file
+Route::get('/dashboard', function() {
+    return view('dashboard');
+});
+
+
+
+
+// SETTING Default Page By Laravel
+
+// OPTION 1 :
+// Route::get('{path}', 'HomeController@index')->where('path', '([A-z\d-\/_.]+)?');
+
+// OPTION 2 :
+Route::fallback(function () {
+    return view('dashboard');
+});

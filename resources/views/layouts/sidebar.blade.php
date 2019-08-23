@@ -21,21 +21,21 @@
                     </li>
         
                     <li class="nav-item has-treeview menu-close">
-                        <a href="#" class="nav-link">
+                        <router-link to="/appointments" class="nav-link">
                             <i class="far fa-calendar d-icon"></i>
                             <p class="d-text">Appointments</p>
-                        </a>
-                    </li>
-    
-                    <li class="nav-item">
-                        <router-link to="/products" class="nav-link">
-                            <i class="fas fa-users d-icon"></i>
-                            <p class="d-text">Patients</p>
                         </router-link>
                     </li>
     
                     <li class="nav-item">
-                        <router-link to="/demo" class="nav-link">
+                        <router-link to="/users" class="nav-link">
+                            <i class="fas fa-users d-icon"></i>
+                            <p class="d-text">Users</p>
+                        </router-link>
+                    </li>
+    
+                    <li class="nav-item">
+                        <router-link to="/doctors" class="nav-link">
                             <i class="fas fa-user-md d-icon"></i>
                             <p class="d-text">Doctors</p>
                         </router-link>
