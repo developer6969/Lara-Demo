@@ -36,4 +36,48 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected $attributes = [
+        'role' => 'user'
+    ];
+
+    public function member(){
+        return $this->hasMany(Member::class); 
+    }
+
+    public function photo(){
+        return $this->hasManyThrough(Photo::class, Member::class);
+    }
+
+    public function doctor(){
+        return $this->hasOne(Doctor::class); 
+    }
+
+    public function qualification(){
+        return $this->hasManyThrough(Qualification::class, Doctor::class);
+    }
+
+    public function specialisation(){
+        return $this->hasManyThrough(Specialisation::class, Doctor::class);
+    }
+
+    public function experience(){
+        return $this->hasManyThrough(Experience::class, Doctor::class);
+    }
+
+    public function award(){
+        return $this->hasManyThrough(Award::class, Doctor::class);
+    }
+
+    public function service(){
+        return $this->hasManyThrough(Service::class, Doctor::class);
+    }
+
+    public function membership(){
+        return $this->hasManyThrough(Membership::class, Doctor::class);
+    }
+
+    public function registration(){
+        return $this->hasManyThrough(Registration::class, Doctor::class);
+    }
 }

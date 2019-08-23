@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AwardController;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,5 +13,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+        // $this->call(ServicesTableSeeder::class);
+        // $this->call(AwardsTableSeeder::class);
+        // $this->call(MembershipsTableSeeder::class);        
+        // $this->call(RegistrationsTableSeeder::class);        
     }
 }
