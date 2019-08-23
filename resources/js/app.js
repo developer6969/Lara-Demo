@@ -5,21 +5,70 @@
  */
 
 require('./bootstrap');
-
 window.Vue = require('vue');
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
+// Vue-router import
+import VueRouter from "vue-router";
+Vue.use(VueRouter);
 
-// const files = require.context('./', true, /\.vue$/i);
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
+// V-From
+import { Form, HasError, AlertError } from "vform";
+window.Form = Form;
+Vue.component(HasError.name, HasError);
+Vue.component(AlertError.name, AlertError);
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+// Define routes
+const routes = [
+    {
+        path: "/dashboard",
+        component: require("./components/Dashboard.vue").default
+    },
+    {
+        path: "/users",
+        component: require("./components/Users.vue").default
+    },
+    {
+        path: "/doctors",
+        component: require("./components/Doctors.vue").default
+    },
+    {
+        path: "/profile",
+        component: require("./components/Profile.vue").default
+    },
+    {
+        path: "/developer",
+        component: require("./components/Developer.vue").default
+    },
+    {
+        path: "page-not-found",
+        component: require("./components/error/PageNotFound.vue").default
+    },
+    {
+        path: "unauthorized-access",
+        component: require("./components/error/UnauthorizedAccess.vue").default
+    },
+    {
+        path: "*",
+        component: require("./components/error/PageNotFound.vue").default
+    }
+];
+
+
+Vue.filter('truncate', function (value, length) {
+    let string = `${value}`;
+    let till = `${length}`;
+    return string.substring(0, till);
+});
+
+Vue.filter('toUSD', function (value) {
+    return `$${value}`;
+});
+
+const router = new VueRouter({
+    mode: 'history',
+    routes // short for `routes: routes`
+});
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -27,6 +76,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
+new Vue({
     el: '#app',
+    router,
 });

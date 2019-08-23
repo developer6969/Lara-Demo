@@ -29651,3 +29651,39 @@ a.text-dark:focus {
   padding-left: 4px;
 }
 
+.router-link-exact-active {
+  color: white !important;
+  background-color: #15749f;
+}
+
+.selected-link {
+  background-color: silver;
+}
+
+.center-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -75px;
+  margin-top: -75px;
+}
+
+.hover-red:hover {
+  font-size: medium !important;
+  color: red;
+}
+
+.hover-green:hover {
+  font-size: medium !important;
+  color: limegreen;
+}
+
+.hover-gold:hover {
+  color: goldenrod;
+}
+
+.float-link {
+  color: red;
+  float: right;
+}
+
