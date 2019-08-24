@@ -23,3 +23,37 @@ Edit following files :
  - js/app.jp
 
  Create API/UserController
+
+
+
+
+
+
+
+
+
+
+
+
+ Run following commands : 
+    1. php artisan make:model Model -mcr
+    2. php artisan make:seeder ModelsTableSeeder
+    3. php artisan make:factory ModelFactory
+
+For : 
+    Schedule
+    Session
+    Day
+    Clinic
+    Status
+    Charge
+
+Draft columns in migration table
+Draft data sample in table seeder
+
+Run commands
+    1. php artisan migrate
+    2. php artisan db:seed
+
+Create relationships between Models
+Create API/ScheduleControlelr

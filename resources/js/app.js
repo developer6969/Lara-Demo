@@ -32,6 +32,10 @@ const routes = [
         component: require("./components/Doctors.vue").default
     },
     {
+        path: "/schedules",
+        component: require("./components/Schedule.vue").default
+    },
+    {
         path: "/profile",
         component: require("./components/Profile.vue").default
     },

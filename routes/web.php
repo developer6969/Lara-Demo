@@ -23,9 +23,9 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 // Launch on click of dashboard
 // All other routes in from here onwards will be Vue-Routes
 // and are registered in resources/js/app.js file
-Route::get('/dashboard', function() {
-    return view('dashboard');
-});
+// Route::get('/dashboard', function() {
+//     return view('dashboard');
+// });
 
 
 

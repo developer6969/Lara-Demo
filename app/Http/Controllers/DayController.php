@@ -1,16 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\API;
+namespace App\Http\Controllers;
 
-
+use App\Day;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Auth; 
-use App\User; 
-use Validator;
 
-class DoctorController extends Controller
+class DayController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,10 +14,17 @@ class DoctorController extends Controller
      */
     public function index()
     {
-        $users = User::with(['doctor', 'qualification', 'specialisation',
-        'experience', 'award', 'service', 'membership', 'registration'])
-        ->where('role', 'doctor')->get();
-        return $users->toJson();
+        //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
     }
 
     /**
@@ -39,10 +41,21 @@ class DoctorController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Day  $day
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Day $day)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Day  $day
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Day $day)
     {
         //
     }
@@ -51,10 +64,10 @@ class DoctorController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Day  $day
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Day $day)
     {
         //
     }
@@ -62,10 +75,10 @@ class DoctorController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Day  $day
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Day $day)
     {
         //
     }

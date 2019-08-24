@@ -2,15 +2,11 @@
 
 namespace App\Http\Controllers\API;
 
-
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Auth; 
-use App\User; 
-use Validator;
+use App\Schedule;
 
-class DoctorController extends Controller
+class ScheduleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,10 +15,8 @@ class DoctorController extends Controller
      */
     public function index()
     {
-        $users = User::with(['doctor', 'qualification', 'specialisation',
-        'experience', 'award', 'service', 'membership', 'registration'])
-        ->where('role', 'doctor')->get();
-        return $users->toJson();
+        $schedules = Schedule::with(['clinic', 'session', 'day', 'charge'])->where('doctor_id', '1')->get();
+        return $schedules->toJson();
     }
 
     /**

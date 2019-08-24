@@ -1,16 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\API;
+namespace App\Http\Controllers;
 
-
+use App\Charge;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Auth; 
-use App\User; 
-use Validator;
 
-class DoctorController extends Controller
+class ChargeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,10 +14,17 @@ class DoctorController extends Controller
      */
     public function index()
     {
-        $users = User::with(['doctor', 'qualification', 'specialisation',
-        'experience', 'award', 'service', 'membership', 'registration'])
-        ->where('role', 'doctor')->get();
-        return $users->toJson();
+        //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
     }
 
     /**
@@ -39,10 +41,21 @@ class DoctorController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Charge  $charge
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Charge $charge)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Charge  $charge
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Charge $charge)
     {
         //
     }
@@ -51,10 +64,10 @@ class DoctorController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Charge  $charge
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Charge $charge)
     {
         //
     }
@@ -62,10 +75,10 @@ class DoctorController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Charge  $charge
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Charge $charge)
     {
         //
     }

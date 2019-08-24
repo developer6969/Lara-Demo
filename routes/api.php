@@ -20,4 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // Route::group(['middleware' => 'auth:api'], function(){
     Route::apiResources(['user' => 'API\UserController']);
     Route::apiResources(['doctor' => 'API\DoctorController']);
+    Route::apiResources(['schedule' => 'API\ScheduleController']);
+
 // });

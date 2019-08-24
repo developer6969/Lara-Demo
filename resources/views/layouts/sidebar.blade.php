@@ -40,11 +40,28 @@
                             <p class="d-text">Doctors</p>
                         </router-link>
                     </li>
+
+                    <li class="nav-item has-treeview menu-close">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-users d-icon"></i>
+                            <p class="d-text">Clinic<i class="right fa fa-angle-left"></i></p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                           @foreach ($clinics as $clinic)
+                                <li class="nav-item">
+                                    <router-link to="/demo" class="nav-link">
+                                        <i class="fas fa-basketball-ball d-icon"></i>
+                                        <p class="d-text">{{ $clinic->shortname }}</p>
+                                    </router-link>
+                                </li>
+                           @endforeach
+                        </ul>
+                    </li>
     
                     <li class="nav-item">
-                        <router-link to="/demo" class="nav-link">
-                            <i class="fas fa-carrot d-icon"></i>
-                            <p class="d-text"> Diet Charts </p>
+                        <router-link to="/schedules" class="nav-link">
+                            <i class="fas fa-calendar-alt d-icon"></i>
+                            <p class="d-text">Schedules</p>
                         </router-link>
                     </li>
     
