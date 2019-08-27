@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Clinic;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -23,6 +24,12 @@ class DashboardController extends Controller
      */
     public function index()
     {
+        // $data = array(
+        //     'title' => 'Laravel Services',
+        //     'clinics' => Clinic::all(),
+            
+        // );
+        // return view('dashboard')->with($data);
         return view('dashboard');
     }
 }

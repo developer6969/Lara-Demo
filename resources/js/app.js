@@ -36,6 +36,14 @@ const routes = [
         component: require("./components/Schedule.vue").default
     },
     {
+        path: "/clinics",
+        component: require("./components/Clinic.vue").default
+    },
+    {
+        path: "/clinicdoc",
+        component: require("./components/Clinicdoc.vue").default
+    },
+    {
         path: "/profile",
         component: require("./components/Profile.vue").default
     },
@@ -82,5 +90,5 @@ const router = new VueRouter({
 
 new Vue({
     el: '#app',
-    router,
+    router
 });

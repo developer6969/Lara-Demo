@@ -13,7 +13,7 @@ class Member extends Model
         // if($now > $year) {
         //     return $now - $year;
         // }
-        return $value;
+        return "45";
     }
 
     public function user()
